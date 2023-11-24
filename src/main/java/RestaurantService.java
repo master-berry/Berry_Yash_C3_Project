@@ -9,10 +9,8 @@ public class RestaurantService {
         for (Restaurant restaurant : restaurants) {
             if(restaurant.getName().equals(restaurantName))
                 return restaurant;
-
         }
         throw new restaurantNotFoundException("Error: Restaurant could not be found");
-
         }
 
 

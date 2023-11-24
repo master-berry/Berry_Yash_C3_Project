@@ -17,14 +17,18 @@ public class Restaurant {
     }
 
     public boolean isRestaurantOpen() {
-        return true;
-
+        LocalTime time = getCurrentTime();
+        if (time.isAfter(openingTime) && time.isBefore(closingTime)) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public LocalTime getCurrentTime(){ return  LocalTime.now(); }
 
     public List<Item> getMenu() {
-
         return menu;
     }
 
@@ -61,9 +65,4 @@ public class Restaurant {
     public String getName() {
         return name;
     }
-
-
-
-
-
 }
