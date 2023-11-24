@@ -75,4 +75,41 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //TDD
+    //>>>>>>>>>>>>>>>>>>>>ORDER TOTAL<<<<<<<<<<<<<<<<<<<<<<<<<]
+
+    @Test
+    public void calculate_order_total_should_calculate_correctly_for_single_item() {
+        restaurant.addToMenu("Sweet corn soup", 119);
+        restaurant.addToMenu("Vegetable lasagne", 269);
+        restaurant.addToMenu("Chicken Burger", 159);
+        restaurant.addToMenu("Chicken Pizza", 359);
+
+        restaurant.addToOrder("Chicken Burger");
+        int orderTotal = restaurant.calculateOrderTotal();
+
+        assertEquals(159, orderTotal);
+    }
+
+    @Test
+    public void calculate_order_total_should_calculate_correctly_for_multiple_items() {
+        restaurant.addToMenu("Sweet corn soup", 119);
+        restaurant.addToMenu("Vegetable lasagne", 269);
+        restaurant.addToMenu("Chicken Burger", 159);
+        restaurant.addToMenu("Chicken Pizza", 359);
+
+        restaurant.addToOrder("Vegetable lasagne", "Chicken Pizza");
+        int orderTotal = restaurant.calculateOrderTotal();
+
+        assertEquals(628, orderTotal);
+    }
+
+    @Test
+    public void calculate_order_total_should_be_0_if_no_items_are_added_to_order() {
+        int orderTotal = restaurant.calculateOrderTotal();
+        assertEquals(0, orderTotal);
+    }
+
+    //<<<<<<<<<<<<<<<<<<<ORDER TOTAL>>>>>>>>>>>>>>>>>>>>>>
 }
