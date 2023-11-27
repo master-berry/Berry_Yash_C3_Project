@@ -29,7 +29,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.RestaurantTest.calculate_order_total_should_be_0_if_no_items_are_added_to_order">
+  <component name="RunManager" selected="JUnit.RestaurantTest">
     <configuration name="RestaurantServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Restaurant" />
       <option name="PACKAGE_NAME" value="" />
@@ -80,8 +80,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RestaurantTest.calculate_order_total_should_be_0_if_no_items_are_added_to_order" />
         <item itemvalue="JUnit.RestaurantTest" />
+        <item itemvalue="JUnit.RestaurantTest.calculate_order_total_should_be_0_if_no_items_are_added_to_order" />
         <item itemvalue="JUnit.RestaurantTest.calculate_order_total_should_calculate_correctly_for_single_item" />
         <item itemvalue="JUnit.RestaurantTest.calculate_order_total_should_calculate_correctly_for_multiple_items" />
         <item itemvalue="JUnit.RestaurantServiceTest" />
